@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Form</title>
+    <style>
+        .button{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body style="background-color:#b0c4dd;">
+    <div class="Form" style="background-color:#e2eefa;align-items: center; max-width: 600px;margin-left: 350px;">
+        <form>
+            <fieldset>
+                <legend>Primary Details</legend>
+                <label style="margin-left:400px;"> Valid Till</label><br>
+                <label>Medicare No</label>   <input style="margin-left: 10px;" type="number" autofocus style="background-color: #b0c4dd;"> <b>/</b> <input size=10 type="text"> <input type="month"><br>
+                <label>Title</label>  <select style="margin-left: 65px;"><option value="None">None</option></select><br>
+                <label style="margin-left: 150px;"> Lastname, Firstname, Middlename </label><br>
+                <label>Name</label> <input style="margin-left: 56px;" type="name" size="50"> <br>
+                <label>Pref. Name</label> <input style="margin-left: 21px;" type="text" size="30"><br>
+                <label>DOB</label> <input style="margin-left: 60px;" type="date"><br>
+                <label>Sex</label> <input style="margin-left: 70px;" type="radio" name="Sex"><label>Male</label> <input type="radio" name="Sex"> <label>Female</label> <br>
+                <label>Family Name</label> <input style="margin-left: 5px;"type="text"> <input style="text-align: center;" size="1" type="text" placeholder="N"> <input style="text-align: center;" size="1" type="text" placeholder="I">
+            </fieldset>
+            <fieldset>
+                <legend>Contact Details</legend>
+                <label style="margin-left: 100px;">Home</label><label style="margin-left: 143px;">Work</label><br>
+                <label>Phone</label> <input style="margin-left: 55px;"type="tel"> <input type="tel"><br>
+                <label style="margin-left: 100px;">Mobile</label><label style="margin-left: 136px;">Fax</label><br>
+                <input style="margin-left: 98px;" type:tel> <input type="text"><br>
+                <label style="margin-left: 100px;">Next of Kin</label><label style="margin-left: 105px;">Next of Kin Ph:</label><br>
+                <input style="margin-left: 98px;" type="tel"> <input type="tel"><br>
+                <label>Emerg. No</label> <input style="margin-left: 24px;"type="number"><br>
+                <label>Email</label> <input style="margin-left: 56px;" type="email">
+            </fieldset>
+            <fieldset>
+                <legend>Address Details</legend>
+                <fieldset>
+                    <legend>Residential Address</legend>
+                    <label>Address 1</label> <input type="text" size="70"><br>
+                    <label>Address 2</label> <input type="text" size="70"><br>
+                    <label>Suburb</label> <input type="text" size="30"> <label>State</label> <select><option value="VIC">VIC</option></select><br>
+                    <label>Postal Code</label> <input type="text"> <button > ? </button> <label>Country</label> <input type="text" value="AUSTRALIA">
+                </fieldset>
+                <fieldset>
+                    <legend>Single Address</legend>
+                    <label>Are Mailing Address and Residential Address same? </label> <input type="checkbox"> <label>Yes</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Mailing Address</legend>
+                    <legend>Residential Address</legend>
+                    <label>Address 1</label> <input type="text" size="70"><br>
+                    <label>Address 2</label> <input type="text" size="70"><br>
+                    <label>Suburb</label> <input type="text" size="30"> <label>State</label> <select><option value="VIC">VIC</option></select><br>
+                    <label>Postal Code</label> <input type="text"> <button> ? </button> <label>Country</label> <input type="text" value="AUSTRALIA">
+                </fieldset>
+            </fieldset>
+        <br>
+        <div style="margin-left: 50px;">
+            <label> IHI Number </label> <label style="margin-left: 43px; margin-right: 20px;"> 80036 </label> <input type="text"><br>
+            <label>Number Status</label> <input style="margin-left: 26px;"type="text" size = "40"><br>
+            <label>Record Status</label> <input style="margin-left: 33px;" type="text" size = "40"><br>
+            <label>Last Updated</label> <input style="margin-left: 35px;" type="text" size = "40"><br>
+        </div>
+        <br>
+        <br>
+        <div class="button">
+            <button style="width: 200px;" type="submit">Submit</button> <button style="width:200px" type="reset">Clear</button>
+        </div>
+        <br>
+        
+    </form>
+    </div>
+</body>
+</html>
