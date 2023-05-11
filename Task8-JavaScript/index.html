@@ -4,39 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet"  href="css/style.css">
     <title>Document</title>
-    <style>
+    <!-- <style>
+
+        *{
+            background-color:#f1f1f1;
+            color:#8b8b8b
+        }
         .container{
-            background-color: antiquewhite;
+            background-color: white;
+            margin: 5px;
+            padding: 5px;
         }
-        input[type="submit"]{
-            background-color: rgb(5, 118, 247);
+        button{
+            background-color: #337ab7;
+            height: 30px;
+            width:50px;
+            border-radius: 5px;
+            color: white;
         }
-        .main{
-            background-color: aliceblue;
+        input[type="text"]{
+            width: 99%;
+            height: 2em;
+            margin: 5px;
+            background-color: white;
+            border:2px solid;
+            border-color: #8b8b8b;
+            border-radius: 5px;
         }
-    </style>
+        label{
+            background-color: white;
+        }
+    </style> -->
 </head>
 <body>
-    <form>
-        <div class="main">
-        <div class="container">
+        <div class="contain">
             <label for="number" >
                 Enter a number
             </label><br>
-            <input id="number" name="number"> 
+            <input id="number" name="number" type="number"> 
         </div>
-        <div class="container">
+        <div class="contain">
             <label for="split-times">
                 Enter number of times you want to split
             </label><br>
-            <input id="split-times" name="split-times">
+            <input id="split-times" name="split-times" type="number">
         </div>
-        <div class="container">
-        <input type="submit" >
-    </div>
-    </div>
-    </form>
+        <div class="contain">
+            <button type="submit" onclick="splitNumber()"> Split </button>
+        </div>
+        <br><br><br>
+        
+    <div id="output"></div>
 
+    <script src = "JavaScript/main.js"></script>
+    
 </body>
 </html>
