@@ -1,0 +1,25 @@
+1. To insert values in customers table.
+~ Insert into customers (customer_id, first_name, last_name, age, country) 
+values (6, 'Riya', 'Sharma', 21, 'IND')
+
+2. To insert multiple values in customers table.
+Insert into customers (customer_id, first_name, last_name, age, country) 
+values (7,'Anshir', 'Chaudhary', 23, 'IND'), (8,'Rishabh', 'Sharma', 25, 'IND'), (9,'Rohit', 'Sharma', 35, 'IND')
+ 
+3. To get number of customers per country. 
+~ SELECT country, COUNT(*) from Customers group by country
+
+3. To get the orders who have amount between 100 to 500.
+~ Select * from orders where amount>=100 and amount<=500
+
+4. To get the first name and last name of customers who have bought Keypad.
+~ SELECT first_name, last_name from customers INNER JOIN orders on 
+customers.customer_id= orders.customer_id where orders.item = 'Keyboard'
+
+5. To get the name of the countries where shipping status is Pending.
+~ SELECT country from customers inner join shippings on 
+customers.customer_id = shippings.customer where shippings.status = "Pending"
+
+6. To get the number of orders per customer.
+~ Select customers.first_name,customers.last_name, count(*) as 'number of orders' 
+from orders inner join customers on orders.customer_id = customers.customer_id group by orders.customer_id
