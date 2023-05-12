@@ -1,0 +1,55 @@
+25  ls
+26  ls -l
+27  mkdir my-website
+28  cd my-website
+29  cd ../
+30  cd my-website
+31  touch mdn-example.md
+32  cd ../
+33  rmdir my-website
+34  rmdir my-website -r
+35  rmdir -r mywebsite
+36  -r mywebsite
+37  rmdir -r my-website
+38  rmdir --help
+39  rmdir -p my-website
+40  mv my-website/mdn-example.md ../
+41  ls
+42  cd my-website
+43  ls
+44  touch mdn-example.md
+45  ls
+46  mv mdn-example.md ../mdn-example.txt
+47  ls
+48  cd ../
+49  ls
+50  cd ../
+51  ls
+52  rm mdn-example.md
+53  ls
+54  cd Task9-CLI/
+55  ls
+56  cp mdn-example.txt my-website/mdn-test-cmd.txt.bak
+57  ls
+58  cd my-website/
+59  ls
+60  wc -l mdn-test-cmd.txt.bak
+61  code .
+62  wc -l mdn-test-cmd.txt.bak
+63  ls | wc -l
+64  code file2.txt
+65  ls | wc -l
+66  wc -l
+67  ls | wc -l mdn-test-cmd.txt.bak
+68  curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+69  curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L
+70  curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I
+71  curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
+72  curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+73  npm install prettier
+74  npx prettier
+75  cd ../
+76  history
+77  history -w ~/history.txt
+78  vim ~/history.txt
+79  history
