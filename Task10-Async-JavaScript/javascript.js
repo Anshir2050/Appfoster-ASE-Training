@@ -15,8 +15,6 @@ async function getUser(d){
   return userdata
 }
 
-
-
 getUserData()
   .then(
     (data) => {

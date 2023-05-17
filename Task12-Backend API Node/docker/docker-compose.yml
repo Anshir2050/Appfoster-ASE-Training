@@ -1,0 +1,44 @@
+version: "3.3"
+services:
+  db:
+    image: mysql/mysql-server:latest
+    container_name: appfoster-node-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: nodedb
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_PASSWORD: password
+      MYSQL_USER: user
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysqldata:/var/lib/mysql
+    networks:
+      - node-project
+
+  npm:
+    image: node:lts-alpine3.15
+    container_name: appfoster-node-npm
+    volumes:
+      - ../src:/var/www/html
+    ports:
+      - 3000:3000
+      - 3001:3001
+    working_dir: /var/www/html
+    entrypoint: ["tail", "-f", "/dev/null"]
+    networks:
+      - node-project
+
+  adminer:
+    image: adminer:latest
+    container_name: appfoster-node-adminer
+    ports:
+      - 8080:8080
+    networks:
+      - node-project
+
+networks:
+  node-project:
+    driver: bridge

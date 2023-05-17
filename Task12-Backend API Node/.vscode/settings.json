@@ -1,0 +1,30 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "ewp.cegaqnz5rweb.us-west-2.rds.amazonaws.com",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "ewp",
+      "database": "experts",
+      "username": "successive",
+      "password": "3w9@rds9swd"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "127.0.01",
+      "port": 3306,
+      "driver": "MySQL",
+      "database": "nodedb",
+      "username": "user",
+      "password": "password",
+      "name": "local"
+    }
+  ]
+}
