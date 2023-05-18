@@ -6,6 +6,12 @@ li {
 .social img{
     width:1em;
     margin-right:0.5em
+
+}
+.social a{
+    cursor: pointer;
+    text-decoration:none;
+    color: white
 }
 .social ul{
     display: flex;

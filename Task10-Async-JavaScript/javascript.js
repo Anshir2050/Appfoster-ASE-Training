@@ -134,7 +134,7 @@ getUserData()
           item.style.fontWeight = 500   
           item.innerHTML = userdata.name
           const image = document.createElement('img')
-          image.nodeType = "button"
+          // image.nodeType = "button"
           image.src = "eye-solid.svg"
           image.style.cursor = "pointer"
           

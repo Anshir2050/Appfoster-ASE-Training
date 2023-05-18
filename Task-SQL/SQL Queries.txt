@@ -5,7 +5,7 @@ values (6, 'Riya', 'Sharma', 21, 'IND')
 2. To insert multiple values in customers table.
 Insert into customers (customer_id, first_name, last_name, age, country) 
 values (7,'Anshir', 'Chaudhary', 23, 'IND'), (8,'Rishabh', 'Sharma', 25, 'IND'), (9,'Rohit', 'Sharma', 35, 'IND')
- 
+
 3. To get number of customers per country. 
 ~ SELECT country, COUNT(*) from Customers group by country
 

@@ -12,9 +12,9 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     ports:
-      - 3306:3306
-    volumes:
-      - ./mysqldata:/var/lib/mysql
+      - 3307:3307
+    # volumes:
+    #   - ./mysqldata:/var/lib/mysql
     networks:
       - node-project
 
