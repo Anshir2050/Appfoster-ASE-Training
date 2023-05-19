@@ -123,24 +123,27 @@ getUserData()
         
       for (let d=t;d<t+4 ; d++){
 
-        console.log(d)
-        getUser(data[d]).then((userdata)=>{
-          User.push(userdata)
+        console.log(data[d],"hey")
+        
+          // User.push(userdata)
           const list_item = document.createElement('li')
           list_item.classList.add("list-group-item", "m-4", "d-flex", "justify-content-between", "align-items-start")
           list_item.id = "list-group-item"
           const item = document.createElement('div')
           item.style.color = "#0d6efd"
           item.style.fontWeight = 500   
-          item.innerHTML = userdata.name
+          item.innerHTML = data[d].name
           const image = document.createElement('img')
-          // image.nodeType = "button"
+          image.nodeType = "button"
           image.src = "eye-solid.svg"
           image.style.cursor = "pointer"
           
           image.addEventListener("click", ()=> {
-          $('#exampleModal').modal('show');
-          document.getElementById('modal-body').innerHTML = `1.) Username - ${userdata.name}<br> 2.) Email - ${userdata.email}<br> 3.)Gender - ${userdata.gender}<br> 4.) Status - ${userdata.status}`
+          getUser(data[d]).then((userdata)=>{
+            $('#exampleModal').modal('show');
+            document.getElementById('modal-body').innerHTML = `<table> <tr><th> Username </th><td> ${userdata.name}</td></tr><tr> <th>Email </th> <td>${userdata.email}</td></tr><tr> <th>Gender </th> <td>${userdata.gender}</td></tr> <tr><th> Status </th> <td>${userdata.status}</td></tr></table>`
+          })
+          
           });
           
           list_item.appendChild(item)
@@ -148,11 +151,8 @@ getUserData()
           document.getElementById("items").appendChild(list_item)
           // document.getElementsByClassName.innerHTML = userdata
           // t += 1
-          console.log(userdata.name)
-        }
+          // console.log(userdata.name)
         
-        
-        )
       }
     }
     userLists(t)
