@@ -19,7 +19,6 @@ getUserData()
   .then(
     (data) => {
       console.log(data)
-      let User = []
       let t = 0
       // pagination
       let curr = '1'
@@ -141,7 +140,8 @@ getUserData()
           image.addEventListener("click", ()=> {
           getUser(data[d]).then((userdata)=>{
             $('#exampleModal').modal('show');
-            document.getElementById('modal-body').innerHTML = `<table> <tr><th> Username </th><td> ${userdata.name}</td></tr><tr> <th>Email </th> <td>${userdata.email}</td></tr><tr> <th>Gender </th> <td>${userdata.gender}</td></tr> <tr><th> Status </th> <td>${userdata.status}</td></tr></table>`
+            document.getElementById('exampleModalLabel').innerHTML = `${userdata.name}`
+            document.getElementById('modal-body').innerHTML = `<table> <tr> <th>Email </th> <td>${userdata.email}</td></tr><tr> <th>Gender </th> <td>${userdata.gender}</td></tr> <tr><th> Status </th> <td>${userdata.status}</td></tr></table>`
           })
           
           });
