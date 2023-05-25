@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: nodedb
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: NO
       MYSQL_PASSWORD: password
       MYSQL_USER: user
       SERVICE_TAGS: dev

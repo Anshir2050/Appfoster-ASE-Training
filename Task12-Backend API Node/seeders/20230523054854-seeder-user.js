@@ -6,7 +6,9 @@ module.exports = {
     await queryInterface.bulkInsert('users', [{
        user_name: 'John Doe',
        description: 'I am a user created as seeder',
-       published: false
+       published: false,
+       createdAt: new Date(),
+       updatedAt: new Date()
      }], {});
     
   },

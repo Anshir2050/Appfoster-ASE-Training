@@ -26,11 +26,16 @@ db.sequelize.sync()
     console.log("Failed to sync db: " + err.message);
   });
 
+app.use(express.static( "public" ))
 // // drop the table if it already exists
 // db.sequelize.sync({ force: true }).then(() => {
 //   console.log("Drop and re-sync db.");
 // });
+const path = require('path');
 
+module.exports = {
+  'config': path.resolve('config', 'config.json')
+}
 // simple route
 app.get("/", (req, res) => {
   res.render('pages/index');
@@ -44,3 +49,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+
