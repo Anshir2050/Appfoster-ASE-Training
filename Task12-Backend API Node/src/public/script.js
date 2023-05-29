@@ -86,7 +86,14 @@ async function deleteProject(d){
   $('.toast').toast('show')
   
 }
-
+document.getElementById('moon').addEventListener('click',()=>{
+  if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+      document.documentElement.setAttribute('data-bs-theme','light')
+  }
+  else {
+      document.documentElement.setAttribute('data-bs-theme','dark')
+  }
+})
 
 document.getElementById('addUser').addEventListener("click", () =>{
   document.getElementById('add-user-name').value = ""
@@ -204,7 +211,7 @@ function UL() {
           // User.push(userdata)
           const list_item = document.createElement('tr')
           const idx = document.createElement('th')
-          idx.scope = "row"
+          // idx.setAttribute('scope','row')
           idx.innerHTML = d+1
           const item = document.createElement('td')
           item.innerHTML = data[d].user_name

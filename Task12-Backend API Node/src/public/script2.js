@@ -43,6 +43,14 @@ async function deleteProject(d){
     
   }
 
+  document.getElementById('moon').addEventListener('click',()=>{
+    if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+        document.documentElement.setAttribute('data-bs-theme','light')
+    }
+    else {
+        document.documentElement.setAttribute('data-bs-theme','dark')
+    }
+})
 // console.log(data)
 function projectLists(){
 
@@ -79,12 +87,10 @@ function projectLists(){
       for (let i=0; i<U.length; i++){
         const list_item = document.createElement('tr')
           const idx = document.createElement('th')
-          idx.scope = "row"
+          // idx.setAttribute('scope','row') 
           idx.innerHTML = i+1
           const item = document.createElement('td')
           item.innerHTML = U[i].title
-          // const e_mail = document.createElement('td')
-          // e_mail.innerHTML = data[d].email
           const images = document.createElement('td')
           const view = document.createElement('img')
           view.nodeType = "button"
@@ -103,7 +109,6 @@ function projectLists(){
           images.appendChild(del)
           list_item.appendChild(idx)
           list_item.appendChild(item)
-          // list_item.appendChild(e_mail)
           list_item.appendChild(images)
           document.getElementById("items").appendChild(list_item)
         

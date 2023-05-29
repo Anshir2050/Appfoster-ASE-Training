@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,16 +9,22 @@
       img{
         width:20px;
         filter: invert(38%) sepia(67%) saturate(6486%) hue-rotate(211deg) brightness(102%) contrast(98%);
-        margin-right: 10px;
+        margin-right: 15px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div class="d-grid gap-2 col-6 mx-auto m-2">
-      <button class="btn btn-outline-danger" type="button" id="addUser">Add New User</button>
+    <div class="d-flex justify-content-between">
+    <div class="m-4"></div>
+      <div class="d-grid gap-2 col-6 mx-auto m-4">
+        <button class="btn btn-outline-danger" type="button" id="addUser">Add New User</button>
+      </div>
+      <img src="./moon-solid.svg" id="moon" style="margin-right:40px; width:30px; filter: invert(53%) sepia(2%) saturate(4%) hue-rotate(7deg) brightness(93%) contrast(90%);">
     </div>
+    
 
-    <table class="table m-3 table-striped table-hover">
+    <table class="table table-striped table-hover container mt">
       <thead>
         <tr>
           <th scope="col">#</th>
