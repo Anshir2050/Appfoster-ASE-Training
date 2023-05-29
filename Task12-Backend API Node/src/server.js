@@ -31,14 +31,19 @@ app.use(express.static( "public" ))
 // db.sequelize.sync({ force: true }).then(() => {
 //   console.log("Drop and re-sync db.");
 // });
-const path = require('path');
+// const path = require('path');
 
-module.exports = {
-  'config': path.resolve('config', 'config.json')
-}
+// module.exports = {
+//   'config': path.resolve('config', 'config.json')
+// }
 // simple route
 app.get("/", (req, res) => {
   res.render('pages/index');
+  
+});
+app.get("/index2", (req, res) => {
+  res.render('pages/index2');
+  
 });
 
 require("./app/routes/user.routes")(app);

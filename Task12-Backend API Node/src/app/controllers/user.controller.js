@@ -17,8 +17,7 @@ exports.create = (req, res) => {
   // Create a User
   const user = {
     user_name: req.body.user_name,
-    description: req.body.description,
-    published: req.body.published ? req.body.published : false
+    email: req.body.email,
   };
 
   // Save User in the database
@@ -140,18 +139,18 @@ exports.deleteAll = (req, res) => {
 };
 
 // find all published User
-exports.findAllPublished = (req, res) => {
-  User.findAll({ where: { published: true } })
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving Users."
-      });
-    });
-};
+// exports.findAllPublished = (req, res) => {
+//   User.findAll({ where: { published: true } })
+//     .then(data => {
+//       res.send(data);
+//     })
+//     .catch(err => {
+//       res.status(500).send({
+//         message:
+//           err.message || "Some error occurred while retrieving Users."
+//       });
+//     });
+// };
 
 exports.getUserProjects = (req, res) => {
   const id = req.params.id
