@@ -10,9 +10,6 @@ module.exports = app => {
   // Retrieve all users
   router.get("/", users.findAll);
 
-  // Retrieve all published users
-  // router.get("/published", users.findAllPublished);
-
   // Retrieve a single User with id
   router.get("/:id", users.findOne);
 
@@ -27,7 +24,6 @@ module.exports = app => {
 
   // Get User Projects
   router.get("/getUserProjects/:id", users.getUserProjects);
-
 
   app.use('/api/users', router);
   // app.use('/api/projects', router);

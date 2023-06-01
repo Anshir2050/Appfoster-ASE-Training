@@ -1,8 +1,10 @@
-// import {getProject, getUserProjects, deleteProject, updateProject, addProject} from './script.js'
-const data = JSON.parse(localStorage.getItem('data'))
-// JSON.stringify(data)
-async function getUserProjects(d){
-    let res = await fetch(`http://localhost:3000/api/users/getUserProjects/${d.id}`)
+const url = window.location.href
+
+const id = url.split('/')[3]
+
+console.log(url,id)
+async function getUserProjects(id){
+    let res = await fetch(`http://localhost:3000/api/users/getUserProjects/${id}`)
     // console.log(res)
     let userdata = await res.json()
     // document.getElementById('item1').innerHTML = userdata[0].name
@@ -54,7 +56,7 @@ async function deleteProject(d){
 // console.log(data)
 function projectLists(){
 
-    getUserProjects(data).then((userdata)=>{
+    getUserProjects(id).then((userdata)=>{
       document.getElementById('exampleModalLabel').innerHTML = `${userdata.user_name}`
 
       document.getElementById('project-name').value = ""
@@ -91,24 +93,26 @@ function projectLists(){
           idx.innerHTML = i+1
           const item = document.createElement('td')
           item.innerHTML = U[i].title
+          const space = document.createElement('td')
           const images = document.createElement('td')
           const view = document.createElement('img')
           view.nodeType = "button"
-          view.src = "./eye-solid.svg"
+          view.src = "../../eye-solid.svg"
           view.style.cursor = "pointer"
           images.appendChild(view)
           const edit = document.createElement('img')
           edit.nodeType = "button"
-          edit.src = "./edit.svg"
+          edit.src = "../../edit.svg"
           edit.style.cursor = "pointer"
           images.appendChild(edit)
           const del = document.createElement('img')
           del.nodeType = "button"
-          del.src = "./trash.svg"
+          del.src = "../../trash.svg"
           del.style.cursor = "pointer"
           images.appendChild(del)
           list_item.appendChild(idx)
           list_item.appendChild(item)
+          list_item.appendChild(space)
           list_item.appendChild(images)
           document.getElementById("items").appendChild(list_item)
         
@@ -142,7 +146,6 @@ function projectLists(){
           
           
         })
-        // console.log(userdata)
         
       }
     

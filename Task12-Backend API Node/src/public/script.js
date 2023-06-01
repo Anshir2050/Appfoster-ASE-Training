@@ -23,7 +23,7 @@ async function deleteUser(d){
     const P = Object.values(projects.project)
     
     for (let p in P){
-      deleteProject(P[p])
+      fetch(`http://localhost:3000/api/projects/${P[p].id}`,{method:'DELETE'})
     }
     fetch(`http://localhost:3000/api/users/${d.id}`,{method:'DELETE'})
     
@@ -72,20 +72,14 @@ async function addUser(){
 
 async function getProject(d){
   let res = await fetch(`http://localhost:3000/api/projects/${d.id}`)
-  console.log(res)
   let userdata = await res.json()
   // document.getElementById('item1').innerHTML = userdata[0].name
   return userdata
 }
 
-async function deleteProject(d){
-  await fetch(`http://localhost:3000/api/projects/${d.id}`,{method:'DELETE'})
 
-  document.getElementById("toast-body").innerHTML = `Project: ${d.title} Deleted!`
-  
-  $('.toast').toast('show')
-  
-}
+
+
 document.getElementById('moon').addEventListener('click',()=>{
   if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
       document.documentElement.setAttribute('data-bs-theme','light')
@@ -256,20 +250,13 @@ function UL() {
           })
 
           view.addEventListener("click", ()=> {
-            // window.open("./index2")
-            window.location.href = "./index2"
-            // window.location.href = "./index2"
-            localStorage.clear()
-            // console.log(data[d])
-            localStorage.setItem("data",JSON.stringify(data[d]))
+
+            window.location.href = `./${data[d].id}/projects/`
         
       
           });
           
           
-          // document.getElementsByClassName.innerHTML = userdata
-          // t += 1
-          // console.log(userdata.name)
         
       }
     
